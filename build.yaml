@@ -1,0 +1,21 @@
+# builders:
+#   image_builder:
+#     import: 'package:image_path_tool/builder.dart'
+#     builder_factories: ['imagePathToolBuilder']
+#     build_extensions: { '.dart': ['.image.dart'] }
+#     auto_apply: all_packages
+#     build_to: source
+
+targets:
+  $default:
+    builders:
+      image_path_tool|image_builder:
+        enabled: true
+
+builders:
+  image_builder:
+    import: 'package:image_path_tool/builder.dart'
+    builder_factories: ['imagePathToolBuilder']
+    build_extensions: { '.dart': ['.image.dart'] }
+    auto_apply: root_package
+    build_to: source
