@@ -1,6 +1,6 @@
 name: image_path_tool
 description: A new Flutter package project.
-version: 0.0.1
+version: 0.0.2
 homepage:
 
 environment:
@@ -10,7 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  source_gen: 1.2.2
+  source_gen: 1.4.0
 
 dev_dependencies:
   flutter_lints: ^1.0.0

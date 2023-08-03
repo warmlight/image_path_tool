@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:image_path_tool/image_path_tool.dart';
 
-@ImagePathTool('resources/', 'ImagePathTest')
+@ImagePathTool('resources/', '')
 void main() {
   runApp(const MyApp());
 }
