@@ -25,5 +25,5 @@ class R_Svg {
       'resources/icons/add_circle-outline.svg';
   static const String add__circle__outline =
       'resources/icons/add-circle-outline.svg';
-  static const String add_circle = 'resources/icons/add_circle.svg';
+  static const String add_circle = 'resources/icons/add-circle.svg';
 }
