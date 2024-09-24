@@ -108,7 +108,8 @@ class ImagePathToolGenerator extends GeneratorForAnnotation<ImagePathTool> {
       ...pngImagesPath.values,
     ];
 
-    for (var file in Directory('${Directory.current.path}/$path').listSync(recursive: true)) {
+    print('🚗🚗 开始检查未使用的图片 ${DateTime.now().toString()} 🚗🚗');
+    for (var file in Directory(Directory.current.path).listSync(recursive: true)) {
       // 返回未使用的图片
       // 随着每一次遍历，图片集合会被更新，剔除那些已经使用的图片, 直到所有文件遍历完成
       Tuple2? result = filterNoUseImageInFile(file: file, imageNameList: allImagesName, imagePathList: allImagePath);
@@ -134,7 +135,7 @@ class ImagePathToolGenerator extends GeneratorForAnnotation<ImagePathTool> {
     // 未被使用的图片名 和 未被使用的图片路径 取交集，得到未被使用的图片
     List<String> intersection = allImagePath.toSet().intersection(nameMapPath.toSet()).toList();
     if (intersection.isNotEmpty) {
-      String logInfo = '😈😈 下列图片可能未使用，如确定未被使用，可清理减小包体积 😈😈 \n';
+      String logInfo = '😈😈 下列图片可能未使用，如确定未被使用，可清理减小包体积 ${DateTime.now().toString()} 😈😈 \n';
       for (var element in intersection) {
         final File imageFile = File(element);
         if (imageFile.existsSync()) {
